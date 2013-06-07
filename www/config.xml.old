@@ -1,0 +1,11 @@
+<plugin name="Camera" value="org.apache.cordova.CameraLauncher" />
+<plugin name="Camera" value="CDVCamera" />
+
+<feature id="blackberry.media.camera" />
+<rim:permissions>
+    <rim:permit>use_camera</rim:permit>
+</rim:permissions>
+
+<feature name="http://tizen.org/api/application" required="true"/>
+<feature name="http://tizen.org/api/application.launch" required="true"/>
+
