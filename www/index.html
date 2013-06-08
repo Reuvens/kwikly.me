@@ -2,31 +2,30 @@
 <html>
   <head>
     <title>Capture Photo</title>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-    <script src="phonegap.js"></script>
-    <script type="text/javascript" charset="utf-8">
-//$(document).ready(function () {
-    function capturePhoto()
-    {
-    navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50 }); 
-    }
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+ 	<script src="phonegap.js"></script>
+    	<script type="text/javascript" charset="utf-8">
 
-function onPhotoDataSuccess(imageData) {
-  var url = 'http://www.kwikly.me/sell';
-  var price = $('#price');
-  var params = { img: imageData, price : price };
-  navigator.notification.alert('photo taken');    
-  $.post(url, params, function(data) {
-            // Display the selected image on send complete
-            $('#image').attr('src', 'data:image/jpeg;base64,' + params['image']);
-        });
-}
+	    function capturePhoto()
+	    {
+	    navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50 }); 
+	    }
 
-function onFail(message) {
-    alert('Failed because: ' + message);
-}
-//}
-    </script>
+		function onPhotoDataSuccess(imageData) {
+		  var url = 'http://www.kwikly.me/sell';
+		  var price = $('#price');
+		  var params = { img: imageData, price : price };
+		  navigator.notification.alert('photo taken');    
+		  $.post(url, params, function(data) {
+			    // Display the selected image on send complete
+			    $('#image').attr('src', 'data:image/jpeg;base64,' + params['image']);
+			});
+		}
+
+		function onFail(message) {
+		    alert('Failed because: ' + message);
+		}
+    	</script>
   </head>
   <body onload="jAlert('This is a custom alert box', 'Alert Dialog');">
     <input name="price" id="price" type="number" placeholder="$$$$"/>
