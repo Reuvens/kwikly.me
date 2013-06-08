@@ -25,7 +25,12 @@
 		function onFail(message) {
 		    alert('Failed because: ' + message);
 		}
-    	</script>
+
+		$(document).ready(function(){
+			navigator.notification.alert('javascript is loaded');    
+		  }
+		)
+		</script>
   </head>
   <body onload="jAlert('This is a custom alert box', 'Alert Dialog');">
     <input name="price" id="price" type="number" placeholder="$$$$"/>
