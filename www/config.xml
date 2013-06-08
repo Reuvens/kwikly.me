@@ -8,7 +8,7 @@
     </description>
 
     <author href="https://kwikly.me" email="reuven.sa@gmail.com">
-        Gilad Kutiel, Yoav Morag & Reuven Sayag
+        Gilad Kutiel, Yoav Morag, Uri Avraham and Reuven Sayag
     </author>
     <gap:platforms>
         <gap:platform name="android" minVersion="2.1"/>
