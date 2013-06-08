@@ -16,6 +16,7 @@
 		  var price = $('#price');
 		  var params = { img: imageData, price : price };
 		  navigator.notification.alert('photo taken');    
+		  alert('javascript is loaded');    
 		  $.post(url, params, function(data) {
 			    // Display the selected image on send complete
 			    $('#image').attr('src', 'data:image/jpeg;base64,' + params['image']);
@@ -27,12 +28,12 @@
 		}
 
 		$(document).ready(function(){
-			navigator.notification.alert('javascript is loaded');    
+			alert('javascript is loaded');    
 		  }
 		)
 		</script>
   </head>
-  <body onload="jAlert('This is a custom alert box', 'Alert Dialog');">
+  <body onload="navigator.notification.alert('phonegap.js is loaded'); ">
     <input name="price" id="price" type="number" placeholder="$$$$"/>
     <button onclick="capturePhoto();">Capture Photo</button> <br>
   </body>
