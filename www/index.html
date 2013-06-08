@@ -16,7 +16,6 @@
 		  var price = $('#price');
 		  var params = { img: imageData, price : price };
 		  navigator.notification.alert('photo taken');    
-		  alert('javascript is loaded');    
 		  $.post(url, params, function(data) {
 			    // Display the selected image on send complete
 			    $('#image').attr('src', 'data:image/jpeg;base64,' + params['image']);
@@ -29,11 +28,12 @@
 
 		$(document).ready(function(){
 			alert('javascript is loaded');    
+			navigator.notification.alert('phonegap.js is loaded');
 		  }
 		)
 		</script>
   </head>
-  <body onload="navigator.notification.alert('phonegap.js is loaded'); ">
+  <body>
     <input name="price" id="price" type="number" placeholder="$$$$"/>
     <button onclick="capturePhoto();">Capture Photo</button> <br>
   </body>
